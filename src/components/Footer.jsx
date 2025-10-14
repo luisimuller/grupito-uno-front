@@ -1,9 +1,10 @@
 // src/components/Footer.jsx
 import React from "react";
+import "../styles/index.css";
 
 function Footer() {
   return (
-    <footer style={{ marginTop: "50px", textAlign: "center" }}>
+    <footer className="site-footer">
       <p>© 2025 Equipo NextHire Devs - Proyecto académico</p>
     </footer>
   );

@@ -11,6 +11,9 @@ function Sidebar() {
           <li><Link to="/bitacora">Bitácora</Link></li>
           <li><Link to="/integrante/1">Integrante 1</Link></li>
           <li><Link to="/integrante/2">Integrante 2</Link></li>
+          <li><Link to="/integrante/3">Integrante 3</Link></li>
+          <li><Link to="/integrante/4">Integrante 4</Link></li>
+          <li><Link to="/integrante/5">Integrante 5</Link></li>
         </ul>
       </nav>
     </aside>

@@ -71,3 +71,37 @@ body {
   padding: 20px;
   flex-grow: 1;
 }
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  margin-left: 220px; /* espacio para el sidebar */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenedor Home */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Footer fijo al fondo */
+.site-footer {
+  background-color: var(--color3);
+  color: var(--color5);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: auto;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+

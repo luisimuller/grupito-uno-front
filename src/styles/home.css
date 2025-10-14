@@ -1,0 +1,131 @@
+/* Variables base */
+:root {
+  --color1: #20dbcf;   /* turquesa brillante */
+  --color2: #20daaa;   /* verde agua */
+  --color3: #121816;   /* casi negro */
+  --color5: #f3eae8;   /* beige claro */
+}
+
+.home-header {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--color1), var(--color2));
+  color: var(--color5);
+}
+
+.home-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.home-header .subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.presentacion {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.presentacion h2 {
+  color: var(--color1);
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.presentacion p {
+  color: var(--color3);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Sección equipo */
+.team-section {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.team-section h2 {
+  color: var(--color1);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-card {
+  background-color: var(--color1);
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-card a {
+  display: block;
+  font-weight: bold;
+  color: var(--color3);
+  text-decoration: none;
+}
+
+.team-card a:hover {
+  text-decoration: underline;
+}
+
+/* Contacto */
+.contacto {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.contacto a {
+  color: var(--color1);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contacto a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .team-cards {
+    gap: 14px;
+  }
+
+  .team-card {
+    width: 120px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .team-card {
+    width: 95vw;
+    max-width: 340px;
+    margin: 0 auto;
+    font-size: 0.93rem;
+  }
+}

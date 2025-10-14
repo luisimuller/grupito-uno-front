@@ -1,12 +1,22 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Sidebar from "./components/Sidebar.jsx";
+import Footer from "./components/Footer.jsx";
+import Home from "./components/Home.jsx";
 
 export default function RoutesComponent() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      {/* Más rutas vendrán después: /bitacora, /integrantes, /json, /api */}
-    </Routes>
+    <div className="app-container">
+      <Sidebar />
+
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* Agregá más rutas después */}
+        </Routes>
+
+        <Footer />
+      </div>
+    </div>
   );
 }
