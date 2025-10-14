@@ -1,0 +1,28 @@
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 50px; /* espacio para los puntos/emojis */
+  border-left: 4px solid var(--color1); /* línea vertical */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-item::before {
+  content: "📌"; /* emoji */
+  position: absolute;
+  left: -30px; /* alinea el emoji con la línea */
+  top: 0;
+  font-size: 1.5rem;
+  color: var(--color2);
+}
+
+.timeline-item p {
+  background-color: var(--color5);
+  color: var(--color3);
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
