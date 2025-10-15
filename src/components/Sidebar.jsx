@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { INTEGRANTES } from "./Constantes";
 
 function Sidebar() {
   return (
@@ -9,11 +10,10 @@ function Sidebar() {
         <ul>
           <li><Link to="/">Inicio</Link></li>
           <li><Link to="/bitacora">Bitácora</Link></li>
-          <li><Link to="/integrante/1">Integrante 1</Link></li>
-          <li><Link to="/integrante/2">Integrante 2</Link></li>
-          <li><Link to="/integrante/3">Integrante 3</Link></li>
-          <li><Link to="/integrante/4">Integrante 4</Link></li>
-          <li><Link to="/integrante/5">Integrante 5</Link></li>
+          {INTEGRANTES.map(member =>(
+            <li><Link to={`/integrante/${member.id}`}>{member.nombre}</Link></li>
+          ))}
+          {/*  <li><Link to="/integrante/5">Integrante 5</Link></li> */}
         </ul>
       </nav>
     </aside>
