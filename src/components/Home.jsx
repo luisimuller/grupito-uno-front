@@ -7,7 +7,17 @@ import carlosImg from "../assets/img/Carlos_HardDraive3.jpg";
 import gregoryImg from "../assets/img/PepeLeo.jpeg";
 import jackImg from "../assets/img/PepeNico.jpeg";
 import lolaImg from "../assets/img/PepeLola.jpeg";
+import MemberCard from "./MemberCard";
 function Home() {
+
+  const members = [
+    {nombre:"Erwin Schrödinger", imagen:erwinImg, id:1},
+    {nombre:"Carlos HardDrive", imagen:carlosImg, id:2},
+    {nombre:"Gregory Karta", imagen:gregoryImg, id:3},
+    {nombre:"Jack Smith", imagen:jackImg, id:4},
+    {nombre:"Lola Sparrow", imagen:lolaImg, id:5}
+  ];
+
   return (
     <div className="home-container">
       {/* Header */}
@@ -40,17 +50,20 @@ function Home() {
           <p>Accedé al perfil de cada integrante para conocer más sobre ellos</p>
 
           <div className="team-cards">
-            <div className="team-card">
+            {members.map(member => (
+              <MemberCard nombre={member.nombre} imagen={member.imagen} id={member.id} />
+            ))}
+            {/* <div className="team-card">
               <img src={erwinImg} alt="Erwin Schrödinger" />
               <p>Erwin Schrödinger </p>
             </div>
             <div className="team-card">
               <img src={carlosImg} alt="Carlos HardDrive" />
-<p>Carlos HardDrive</p>
+              <p>Carlos HardDrive</p>
             </div>
             <div className="team-card">
               <img src={gregoryImg} alt="Gregory Karta" />
-<p>Gregory Karta</p>
+              <p>Gregory Karta</p>
             </div>
             <div className="team-card">
               <img src={jackImg} alt="Jack Smith" />
@@ -59,7 +72,7 @@ function Home() {
             <div className="team-card">
               <img src={lolaImg} alt="Lola Sparrow" />
               <p>Lola Sparrow</p>
-            </div>
+            </div>*/}
           </div>
         </section>
 
