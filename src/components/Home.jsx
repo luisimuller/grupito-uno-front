@@ -8,15 +8,18 @@ import gregoryImg from "../assets/img/PepeLeo.jpeg";
 import jackImg from "../assets/img/PepeNico.jpeg";
 import lolaImg from "../assets/img/PepeLola.jpeg";
 import MemberCard from "./MemberCard";
+import { INTEGRANTES } from "./Constantes";
+
 function Home() {
 
-  const members = [
-    {nombre:"Erwin Schrödinger", imagen:erwinImg, id:1},
-    {nombre:"Carlos HardDrive", imagen:carlosImg, id:2},
-    {nombre:"Gregory Karta", imagen:gregoryImg, id:3},
-    {nombre:"Jack Smith", imagen:jackImg, id:4},
-    {nombre:"Lola Sparrow", imagen:lolaImg, id:5}
-  ];
+
+  // const members = [
+  //   {nombre:"Erwin Schrödinger", imagen:erwinImg, id:1},
+  //   {nombre:"Carlos HardDrive", imagen:carlosImg, id:2},
+  //   {nombre:"Gregory Karta", imagen:gregoryImg, id:3},
+  //   {nombre:"Jack Smith", imagen:jackImg, id:4},
+  //   {nombre:"Lola Sparrow", imagen:lolaImg, id:5}
+  // ];
 
   return (
     <div className="home-container">
@@ -50,7 +53,7 @@ function Home() {
           <p>Accedé al perfil de cada integrante para conocer más sobre ellos</p>
 
           <div className="team-cards">
-            {members.map(member => (
+            {INTEGRANTES.map(member => (
               <MemberCard nombre={member.nombre} imagen={member.imagen} id={member.id} />
             ))}
             {/* <div className="team-card">
