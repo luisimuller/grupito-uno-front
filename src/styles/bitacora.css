@@ -1,0 +1,80 @@
+.bitacora-container {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--color3);
+}
+
+/* Título general */
+.bitacora-title {
+  text-align: center;
+  font-size: 1.8rem;   /* más pequeño para que quepa en una línea */
+  margin-bottom: 40px;
+  color: var(--color1);
+  white-space: nowrap;  /* evita que se divida en varias líneas */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 100%;
+  position: relative;
+}
+
+.bitacora-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, var(--color1), var(--color2));
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+
+/* Bloque por día */
+.dia-bloque {
+  margin-bottom: 50px;
+}
+
+.dia-bloque h2 {
+  font-size: 1.8rem;
+  color: var(--color2);
+  margin-bottom: 25px;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 3px dashed var(--color2); /* línea vertical punteada */
+  margin-left: 15px;
+}
+
+/* Entrada del timeline */
+.timeline-entry {
+  position: relative;
+  margin-bottom: 25px;
+  padding-left: 25px;
+}
+
+.timeline-entry .emoji {
+  position: absolute;
+  left: -45px;
+  top: 0;
+  font-size: 1.5rem;
+  background-color: var(--color5);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.timeline-entry .contenido {
+  background-color: var(--color5);
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
