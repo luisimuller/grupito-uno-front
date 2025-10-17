@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import "../styles/GregoryKarta.css";
 
 // Importar imágenes con los nombres REALES
-import profilePic from "../assets/img/PepeLeo.jpg";
+import profilePic from "../assets/img/PepeLeo.jpeg";
 import pepeDev from "../assets/img/pepeDev.png";
 import pepeCiberseg from "../assets/img/pepeCiberseg.png";
 import pepeTeam from "../assets/img/pepeTeam.png";
@@ -11,7 +11,7 @@ import interstellar from "../assets/img/interstellar.jpg";
 import backToTheFuture from "../assets/img/Back_to_the_future.webp";
 import harryPotter from "../assets/img/harrypotter.jpg";
 import blackSabbath from "../assets/img/Black_Sabbath_-_Paranoid.jpg";
-import laRenga from "../assets/img/larenga.jpg";
+import laRenga from "../assets/img/larenga.png";
 import megadeth from "../assets/img/Megadeth_Youthanasia.jpg";
 
 const GregoryKarta = () => {
