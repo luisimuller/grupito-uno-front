@@ -32,6 +32,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import GregoryKarta from "./GregoryKarta";
+import ErwinSchrodinger from "./ErwinSchrodinger";
 // Import otros componentes aquí
 
 const Integrante = () => {
@@ -39,7 +40,7 @@ const Integrante = () => {
 
   // Mapeo de IDs a componentes
   const integrantes = {
-    "1": <div>Componente del Integrante 1</div>,
+    "1":<ErwinSchrodinger/>,
     "2": <div>Componente del Integrante 2</div>,
     "3": <GregoryKarta />,
     "4": <div>Componente del Integrante 4</div>,
