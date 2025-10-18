@@ -1,57 +1,43 @@
-// // src/components/Integrante.jsx
-// import React from "react";
-// import { useParams } from "react-router-dom";
-
-// function Integrante() {
-//   const { id } = useParams();
-
-//   // Información de cada integrante
-//   const integrantes = {
-//     1: { nombre: "Integrante 1", experiencia: "Experiencia SAP y Frontend" },
-//     2: { nombre: "Integrante 2", experiencia: "Experiencia Backend y Node.js" },
-//     3: { nombre: "Integrante 3", experiencia: "Experiencia UI/UX y Figma" },
-//     4: { nombre: "Integrante 4", experiencia: "Experiencia DevOps y AWS" },
-//     5: { nombre: "Integrante 5", experiencia: "Experiencia QA y Selenium" },
-//   };
-
-//   const integrante = integrantes[id];
-
-//   if (!integrante) return <p>Integrante no encontrado</p>;
-
-//   return (
-//     <div className="integrante-container">
-//       <h2>{integrante.nombre}</h2>
-//       <p>Experiencia: {integrante.experiencia}</p>
-//     </div>
-//   );
-// }
-
-// export default Integrante;
-
-// src/components/Integrante.jsx
-import React from "react";
 import { useParams } from "react-router-dom";
-import GregoryKarta from "./GregoryKarta";
-import ErwinSchrodinger from "./ErwinSchrodinger";
-// Import otros componentes aquí
+import integrantesData from "../data/integrantes.json";
+import IntegranteNav from "./IntegranteNav";
+import IntegranteHeader from "./IntegranteHeader";
+import IntegranteContent from "./IntegranteContent";
+import IntegranteFooter from "./IntegranteFooter";
+import "../styles/GregoryKarta.css";
+import "../styles/ErwinSchrodinger.css";
 
 const Integrante = () => {
   const { id } = useParams();
+  const integrante = integrantesData.find((i) => i.id === parseInt(id));
 
-  // Mapeo de IDs a componentes
-  const integrantes = {
-    "1":<ErwinSchrodinger/>,
-    "2": <div>Componente del Integrante 2</div>,
-    "3": <GregoryKarta />,
-    "4": <div>Componente del Integrante 4</div>,
-    "5": <div>Componente del Integrante 5</div>,
-  };
+  if (!integrante) {
+    return <h2>Integrante no encontrado...</h2>;
+  }
 
   return (
-    <div className="integrante-container">
-      {integrantes[id] || <div>Integrante no encontrado</div>}
+    <div className={integrante.className}>
+      <IntegranteNav />
+
+      <IntegranteHeader
+        nombre={integrante.nombre}
+        subtitulo={integrante.subtitulo}
+      />
+
+      <IntegranteContent
+        nombre={integrante.nombre}
+        fotoPerfil={integrante.fotoPerfil}
+        presentacion={integrante.presentacion}
+        habilidades={integrante.habilidades}
+        peliculas={integrante.peliculas}
+        discos={integrante.discos}
+        contacto={integrante.contacto}
+      />
+
+      <IntegranteFooter nombre={integrante.nombre} />
     </div>
   );
 };
 
 export default Integrante;
+
