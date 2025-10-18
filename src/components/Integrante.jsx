@@ -4,8 +4,11 @@ import IntegranteNav from "./IntegranteNav";
 import IntegranteHeader from "./IntegranteHeader";
 import IntegranteContent from "./IntegranteContent";
 import IntegranteFooter from "./IntegranteFooter";
-import "../styles/GregoryKarta.css";
-import "../styles/ErwinSchrodinger.css";
+import "../styles/gregorykarta.css";
+import "../styles/erwinschrodinger.css";
+import "../styles/jacksmith.css";
+import "../styles/lolasparrow.css";
+import "../styles/carlosharddrive.css";
 
 const Integrante = () => {
   const { id } = useParams();

@@ -1,0 +1,257 @@
+:root {
+  --rojo: #bd1923;
+  --negro: #181717;
+  --gris-oscuro: #111111;
+  --gris-medio: #615f61;
+  --verde: #88ff82;
+  --blanco: #fcfafa;
+  --texto: #f6f2f2;
+}
+
+.jack-smith {
+  font-family: "Quantico", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--negro);
+  color: var(--blanco);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.jack-smith a {
+  color: var(--blanco);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.jack-smith a:hover {
+  text-decoration: underline;
+}
+
+.jack-smith p {
+  color: var(--texto);
+}
+
+.jack-smith .site-nav {
+  text-align: center;
+  background-color: var(--rojo);
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.jack-smith .site-nav a {
+  margin: 0 15px;
+  font-weight: bold;
+  color: var(--gris-oscuro);
+}
+
+.jack-smith .site-nav a:hover {
+  color: var(--blanco);
+}
+
+.jack-smith .site-header {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, var(--gris-medio), var(--gris-oscuro));
+  color: var(--blanco);
+}
+
+.jack-smith .site-header h1 {
+  font-family: "Audiowide", sans-serif;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.jack-smith .site-header .subtitle {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.jack-smith .loading-bar-container {
+  width: 25%;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 20px auto 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.jack-smith .loading-bar-fill {
+  width: 0;
+  height: 100%;
+  background: var(--verde);
+  animation: jack-load 3s forwards infinite;
+}
+
+@keyframes jack-load {
+  from { width: 100%; background-color: green; }
+  to { width: 0%; background-color: red; }
+}
+
+.jack-smith .container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.jack-smith section {
+  margin-bottom: 50px;
+}
+
+.jack-smith h2 {
+  font-family: "Press Start 2P", system-ui;
+  color: var(--blanco);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.jack-smith .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.jack-smith #presentacion p {
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1.2em;
+  text-align: justify;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--texto);
+}
+
+.jack-smith .profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.jack-smith .team-cards-lm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.jack-smith .team-card-lm,
+.jack-smith .team-card-lm-music {
+  background-color: var(--rojo);
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.jack-smith .team-card-lm img,
+.jack-smith .team-card-lm-music img {
+  width: 100%;
+  border-radius: 0%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  height: 50%;
+}
+
+.jack-smith .team-card-lm h3 {
+  color: var(--blanco);
+  margin-bottom: 10px;
+}
+
+.jack-smith .team-card-lm p {
+  font-size: 1em;
+  max-height: 45%;
+  color: var(--texto);
+}
+
+.jack-smith .team-card-lm a,
+.jack-smith .team-card-lm-music a {
+  display: block;
+  font-weight: bold;
+  color: var(--gris-oscuro);
+  text-decoration: none;
+}
+
+.jack-smith .team-card-lm:hover,
+.jack-smith .team-card-lm-music:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgb(251, 249, 249);
+}
+
+.jack-smith .team-card-lm-music {
+  height: 200px;
+}
+
+.jack-smith .site-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--rojo);
+  color: var(--blanco);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .jack-smith .container {
+    padding: 0 15px;
+  }
+
+  .jack-smith .team-cards-lm {
+    gap: 15px;
+  }
+
+  .jack-smith .team-card-lm p {
+    font-size: 0.6em;
+  }
+
+  .jack-smith .team-card-lm,
+  .jack-smith .team-card-lm-music {
+    width: 120px;
+    padding: 10px;
+  }
+
+  .jack-smith .site-header h1 {
+    font-size: 2rem;
+  }
+
+  .jack-smith .site-header .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .jack-smith .site-nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .jack-smith .team-cards-lm {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .jack-smith .team-card-lm,
+  .jack-smith .team-card-lm-music {
+    width: 100%;
+  }
+
+  .jack-smith .site-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .jack-smith .site-header .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .jack-smith .loading-bar-container {
+    width: 80%;
+  }
+}

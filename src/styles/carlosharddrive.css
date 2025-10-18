@@ -1,0 +1,299 @@
+/* =========================================
+   Variables de color
+========================================= */
+:root {
+  --verde-claro: #e0ffe0;
+  --verde-musgo: #2e4d1c;
+  --verde-grisaceo: #4B5D4B;
+  --verde-oscuro: #2C3E2C;
+  --verde-pasto: #b6d99c;
+}
+
+/* =========================================
+   Estilos generales para el componente
+========================================= */
+.carlos-harddrive {
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, var(--verde-pasto) 0%, var(--verde-musgo) 100%);
+  color: var(--verde-musgo);
+  min-height: 100vh;
+}
+
+/* =========================================
+   Navegación
+========================================= */
+.carlos-harddrive .site-nav {
+  text-align: center;
+  background-color: var(--verde-grisaceo);
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(46,77,28,0.2);
+}
+
+.carlos-harddrive .site-nav a {
+  margin: 0 15px;
+  font-weight: bold;
+  color: var(--verde-claro);
+  text-decoration: none;
+}
+
+.carlos-harddrive .site-nav a:hover {
+  color: #7a5c2e;
+  text-decoration: underline;
+}
+
+/* =========================================
+   Encabezado
+========================================= */
+.carlos-harddrive .site-header {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, var(--verde-pasto) 0%, var(--verde-grisaceo) 100%);
+  color: var(--verde-musgo);
+  border-bottom: 4px solid var(--verde-grisaceo);
+}
+
+.carlos-harddrive .site-header h1 {
+  margin: 0;
+  font-size: 3.8rem;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 0 2px 8px var(--verde-musgo), 0 0 12px var(--verde-pasto);
+}
+
+.carlos-harddrive .site-header .subtitle {
+  margin-top: 10px;
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-family: 'Bebas Neue', Arial, sans-serif;
+}
+
+/* =========================================
+   Barra de carga
+========================================= */
+.carlos-harddrive .loading-bar-container {
+  width: 36%;
+  height: 15px;
+  background: rgba(46,77,28,0.2);
+  margin: 20px auto 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carlos-harddrive .loading-bar-fill {
+  width: 0;
+  height: 100%;
+  background: #88ff82;
+  animation: load 3s forwards infinite;
+}
+
+@keyframes load {
+  from { width: 100%; background-color: var(--verde-musgo); }
+  to { width: 0%; background-color: var(--verde-pasto); }
+}
+
+/* =========================================
+   Contenedor principal
+========================================= */
+.carlos-harddrive .container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.carlos-harddrive section {
+  margin-bottom: 50px;
+}
+
+.carlos-harddrive h2 {
+  font-family: 'Bangers', cursive, Arial, sans-serif;
+  color: var(--verde-musgo);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  margin-bottom: 24px;
+  text-shadow: 2px 2px 0 var(--verde-pasto), 0 4px 12px var(--verde-grisaceo);
+  text-align: center;
+}
+
+/* =========================================
+   Perfil
+========================================= */
+.carlos-harddrive .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.carlos-harddrive .profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 24px rgba(46,77,28,0.15), 0 1.5px 4px rgba(0,0,0,0.08);
+  transition: transform 0.4s cubic-bezier(.25,.8,.25,1), box-shadow 0.4s cubic-bezier(.25,.8,.25,1);
+}
+.carlos-harddrive .profile-img:hover {
+  transform: perspective(600px) rotateY(12deg) scale(1.06);
+  box-shadow: 0 16px 40px rgba(46,77,28,0.22), 0 3px 12px rgba(0,0,0,0.12);
+}
+
+.carlos-harddrive #presentacion p {
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1.2em;
+  text-align: justify;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--verde-musgo);
+}
+
+/* =========================================
+   Tarjetas del equipo
+========================================= */
+.carlos-harddrive .team-cards-lm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.carlos-harddrive .team-card-lm,
+.carlos-harddrive .team-card-lm-music {
+  background-color: var(--verde-pasto);
+  border-radius: 12px;
+  width: 150px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(46,77,28,0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: var(--verde-musgo);
+  position: relative;
+}
+
+.carlos-harddrive .team-card-lm:hover,
+.carlos-harddrive .team-card-lm-music:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 8px 15px rgba(0, 0, 0, 0.9),
+    0 0 15px var(--verde-claro),
+    0 0 20px #ffffff,
+    0 0 30px #b6ffd9;
+  animation: pulseGlowGreen 1.5s infinite alternate;
+}
+
+@keyframes pulseGlowGreen {
+  from {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.9),
+      0 0 15px var(--verde-claro),
+      0 0 20px #ffffff,
+      0 0 30px #b6ffd9;
+  }
+  to {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.9),
+      0 0 20px var(--verde-claro),
+      0 0 40px #ffffff,
+      0 0 60px #b6ffd9;
+  }
+}
+
+.carlos-harddrive .team-card-lm img,
+.carlos-harddrive .team-card-lm-music img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 3px solid var(--verde-musgo);
+  background: var(--verde-claro);
+}
+
+.carlos-harddrive .team-card-lm a,
+.carlos-harddrive .team-card-lm-music a {
+  display: block;
+  font-weight: bold;
+  color: var(--verde-musgo);
+  text-decoration: none;
+}
+
+.carlos-harddrive .team-card-lm a:hover,
+.carlos-harddrive .team-card-lm-music a:hover {
+  text-decoration: underline;
+}
+
+.carlos-harddrive .team-card-lm-music {
+  height: 200px;
+}
+
+/* =========================================
+   Footer
+========================================= */
+.carlos-harddrive .site-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--verde-grisaceo);
+  color: var(--verde-claro);
+}
+
+/* =========================================
+   Media Queries
+========================================= */
+@media (max-width: 900px) {
+  .carlos-harddrive .container {
+    padding: 0 15px;
+  }
+
+  .carlos-harddrive .team-cards-lm {
+    gap: 15px;
+  }
+
+  .carlos-harddrive .team-card-lm,
+  .carlos-harddrive .team-card-lm-music {
+    width: 120px;
+    padding: 10px;
+  }
+
+  .carlos-harddrive .site-header h1 {
+    font-size: 2rem;
+  }
+
+  .carlos-harddrive .site-header .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .carlos-harddrive .site-nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .carlos-harddrive .team-cards-lm {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .carlos-harddrive .team-card-lm,
+  .carlos-harddrive .team-card-lm-music {
+    width: 100%;
+  }
+
+  .carlos-harddrive .site-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .carlos-harddrive .site-header .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .carlos-harddrive .loading-bar-container {
+    width: 80%;
+  }
+}
