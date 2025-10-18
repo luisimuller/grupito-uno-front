@@ -1,0 +1,444 @@
+/* =========================================
+🎨 Paleta de colores
+========================================= */
+:root {
+  --rosa-fuerte: #c63ab4;
+  --rosa-medio: #f14ca5;
+  --rosa-claro: #ff82a9;
+  --rosa-palido: #ffb9b7;
+  --crema: #ffddbc;
+  --fondo: #fff0f5;
+  --blanco: #ffffff;
+  --texto: #333333;
+}
+
+/* =========================================
+🧩 Estilos generales
+========================================= */
+.lola-sparrow {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* =========================================
+🧭 Navegación
+========================================= */
+.lola-sparrow .site-nav {
+  text-align: center;
+  background-color: var(--crema);
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.lola-sparrow .site-nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--rosa-fuerte);
+  transition: color 0.3s ease;
+}
+
+.lola-sparrow .site-nav a:hover {
+  color: var(--rosa-medio);
+  text-decoration: underline;
+}
+
+/* =========================================
+🌸 Encabezado
+========================================= */
+.lola-sparrow .site-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, var(--rosa-fuerte), var(--rosa-palido));
+  color: var(--blanco);
+  position: relative;
+  overflow: hidden;
+}
+
+.lola-sparrow .site-header h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-family: "Sirivennela", sans-serif;
+  letter-spacing: 1px;
+}
+
+.lola-sparrow .site-header .subtitle {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* 🌟 Estrellas decorativas */
+.lola-sparrow .header-star {
+  position: absolute;
+  color: var(--blanco);
+  font-size: 1rem;
+  opacity: 0.8;
+  animation: lola-twinkle 2s infinite alternate;
+}
+
+@keyframes lola-twinkle {
+  0% { opacity: 0.1; transform: scale(0.5) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(20deg); }
+  100% { opacity: 0.2; transform: scale(0.7) rotate(-15deg); }
+}
+
+/* =========================================
+⏳ Barra de carga
+========================================= */
+.lola-sparrow .loading-bar-container {
+  width: 25%;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 25px auto 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.lola-sparrow .loading-bar-fill {
+  width: 0;
+  height: 100%;
+  background: var(--rosa-claro);
+  animation: lola-load 3s forwards infinite;
+}
+
+@keyframes lola-load {
+  to { width: 100%; }
+}
+
+/* =========================================
+📦 Contenedor principal
+========================================= */
+.lola-sparrow .container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.lola-sparrow section {
+  margin-bottom: 50px;
+}
+
+.lola-sparrow h2 {
+  color: var(--rosa-medio);
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "DM Serif Display", serif;
+}
+
+/* =========================================
+👤 Perfil
+========================================= */
+.lola-sparrow .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.lola-sparrow .profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 6px solid var(--rosa-fuerte);
+}
+
+.lola-sparrow #presentacion p {
+  line-height: 1.7;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1.2em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--texto);
+}
+
+/* =========================================
+🃏 Tarjetas (habilidades, películas, música)
+========================================= */
+.lola-sparrow .team-cards-lm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.lola-sparrow .team-card-lm {
+  background-color: var(--rosa-claro);
+  border-radius: 10px;
+  width: 180px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lola-sparrow .team-card-lm:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 8px 15px rgba(0,0,0,0.9),
+    0 0 15px var(--rosa-fuerte),
+    0 0 20px var(--rosa-fuerte);
+  animation: lola-pulseGlow 1s infinite alternate;
+}
+
+@keyframes lola-pulseGlow {
+  from { box-shadow: 0 0 10px var(--rosa-fuerte); }
+  to { box-shadow: 0 0 25px var(--rosa-medio); }
+}
+
+.lola-sparrow .team-card-lm img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.lola-sparrow .team-card-lm h3 {
+  color: var(--blanco);
+  margin: 10px 0;
+}
+
+.lola-sparrow .team-card-lm p {
+  color: var(--blanco);
+  font-size: 0.95rem;
+}
+
+.lola-sparrow .team-card-lm a {
+  display: block;
+  font-weight: bold;
+  color: var(--negro);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.lola-sparrow .team-card-lm a:hover {
+  color: var(--blanco);
+  text-decoration: underline;
+}
+
+/* =========================================
+💌 Contacto
+========================================= */
+.lola-sparrow .contact-section p {
+  font-weight: bold;
+  text-align: center;
+}
+
+.lola-sparrow .contact-section a {
+  color: var(--rosa-medio);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.lola-sparrow .contact-section a:hover {
+  color: var(--texto);
+  text-decoration: underline;
+}
+
+/* =========================================
+🦶 Footer
+========================================= */
+.lola-sparrow .site-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--rosa-palido);
+  color: var(--blanco);
+  font-size: 0.9rem;
+}
+
+/* =========================================
+📱 Responsivo
+========================================= */
+@media (max-width: 900px) {
+  .lola-sparrow .container {
+    padding: 0 15px;
+  }
+
+  .lola-sparrow .team-cards-lm {
+    gap: 15px;
+  }
+
+  .lola-sparrow .team-card-lm {
+    width: 140px;
+    padding: 10px;
+  }
+
+  .lola-sparrow .site-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .lola-sparrow .site-header .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .lola-sparrow .site-nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .lola-sparrow .team-cards-lm {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .lola-sparrow .team-card-lm {
+    width: 100%;
+  }
+
+  .lola-sparrow .site-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .lola-sparrow .loading-bar-container {
+    width: 80%;
+  }
+}
+/* =========================================
+🎶 Tarjetas de música (Rosa Medio)
+========================================= */
+.lola-sparrow .team-cards-lm-music {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.lola-sparrow .team-card-lm-music {
+  background-color: #ff82a9; /* Rosa medio */
+  border-radius: 10px;
+  width: 180px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Efecto de brillo suave */
+.lola-sparrow .team-card-lm-music::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.12) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.lola-sparrow .team-card-lm-music:hover::before {
+  opacity: 1;
+}
+
+.lola-sparrow .team-card-lm-music:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 8px 15px rgba(0, 0, 0, 0.7),
+    0 0 15px #ff82a9,
+    0 0 25px #ff82a9;
+  animation: lolaPulseGlowMusic 1.5s infinite alternate;
+}
+
+@keyframes lolaPulseGlowMusic {
+  from {
+    box-shadow:
+      0 8px 15px rgba(0, 0, 0, 0.7),
+      0 0 15px #ff82a9,
+      0 0 25px #ff82a9;
+  }
+  to {
+    box-shadow:
+      0 8px 15px rgba(0, 0, 0, 0.7),
+      0 0 25px #ff82a9,
+      0 0 45px #ff82a9;
+  }
+}
+
+.lola-sparrow .team-card-lm-music img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 2px solid #ffb9b7;
+  filter: brightness(0.9);
+  transition: filter 0.3s, border-color 0.3s;
+}
+
+.lola-sparrow .team-card-lm-music:hover img {
+  filter: brightness(1.05);
+  border-color: #fff;
+}
+
+.lola-sparrow .team-card-lm-music h3 {
+  color: #fff0f5;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.lola-sparrow .team-card-lm-music p {
+  color: #fff0f5;
+  font-size: 0.95rem;
+}
+
+.lola-sparrow .team-card-lm-music a {
+  display: block;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 8px;
+  transition: color 0.3s;
+}
+
+.lola-sparrow .team-card-lm-music a:hover {
+  color: #ffddbc;
+  text-decoration: underline;
+}
+
+/* =========================================
+📱 Responsivo para tarjetas de música
+========================================= */
+@media (max-width: 900px) {
+  .lola-sparrow .team-cards-lm-music {
+    gap: 15px;
+  }
+
+  .lola-sparrow .team-card-lm-music {
+    width: 150px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .lola-sparrow .team-cards-lm-music {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .lola-sparrow .team-card-lm-music {
+    width: 100%;
+  }
+}
