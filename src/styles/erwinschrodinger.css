@@ -1,3 +1,4 @@
+/* ErwinSchrodinger.css - Adaptado para React */
 /* Paleta de colores en azules */
 :root {
   --azul-oscuro: #0d1b2a;
@@ -7,14 +8,15 @@
   --blanco-azulado: #e0e9f1;
 }
 
-/* Estilos generales */
-body {
+/* Estilos generales del componente */
+.erwin-schrodinger {
   font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: var(--azul-oscuro);
   color: var(--blanco-azulado);
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 /* Navegación */
@@ -28,7 +30,6 @@ body {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-
 }
 
 .site-nav a {
@@ -71,7 +72,7 @@ body {
 }
 
 /* 📊 Barra de carga */
-.loading-bar-container {
+.site-loading-bar-container {
   width: 25%;
   height: 15px;
   background: rgba(255, 255, 255, 0.15);
@@ -80,31 +81,31 @@ body {
   overflow: hidden;
 }
 
-.loading-bar-fill {
+.site-loading-bar-fill {
   width: 0;
   height: 100%;
   background: var(--celeste);
-  animation: load 3s forwards infinite;
+  animation: erwin-load 3s forwards infinite;
 }
 
-@keyframes load {
+@keyframes erwin-load {
   to {
     width: 100%;
   }
 }
 
 /* Contenedor principal */
-.container {
+.erwin-container {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-section {
+.erwin-section {
   margin-bottom: 50px;
 }
 
-h2 {
+.erwin-section h2 {
   color: var(--celeste);
   margin-bottom: 20px;
   text-align: center;
@@ -113,14 +114,14 @@ h2 {
 }
 
 /* Perfil */
-.profile {
+.erwin-profile {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.profile-img {
+.erwin-profile-img {
   width: 160px;
   height: 160px;
   border-radius: 50%;
@@ -129,7 +130,7 @@ h2 {
   border: 3px solid var(--celeste);
 }
 
-#presentacion p {
+.erwin-presentacion p {
   max-width: 800px;
   margin: 0 auto 1.2em auto;
   font-family: "PT Sans", sans-serif;
@@ -138,18 +139,19 @@ h2 {
   text-align: justify;
   color: var(--blanco-azulado);
 }
-#Habilidades p {
+
+.erwin-habilidades p {
   max-width: 800px;
   margin: 0 auto 1.2em auto;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-size: 1rem;
   text-align: center;
-  color: var(--gris-claro);
+  color: var(--blanco-azulado);
 }
 
 /* Tarjetas */
-.team-cards-lm {
+.erwin-cards-container {
   display: flex;
   flex-wrap: wrap;
   gap: 26px;
@@ -157,8 +159,8 @@ h2 {
   margin-top: 20px;
 }
 
-.team-card-lm,
-.team-card-lm-music {
+.erwin-card,
+.erwin-music-card {
   background-color: var(--azul-medio);
   border-radius: 12px;
   width: 200px;
@@ -170,16 +172,16 @@ h2 {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.team-card-lm:hover,
-.team-card-lm-music:hover {
+.erwin-card:hover,
+.erwin-music-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.9),
     0 0 15px var(--celeste),
     0 0 25px var(--celeste);
-  animation: pulseGlow 1.5s infinite alternate;
+  animation: erwin-pulseGlow 1.5s infinite alternate;
 }
 
-@keyframes pulseGlow {
+@keyframes erwin-pulseGlow {
   from {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9),
       0 0 10px var(--celeste),
@@ -192,8 +194,8 @@ h2 {
   }
 }
 
-.team-card-lm img,
-.team-card-lm-music img {
+.erwin-card img,
+.erwin-music-card img {
   width: 100%;
   object-fit: cover;
   margin-bottom: 10px;
@@ -202,30 +204,30 @@ h2 {
   transition: border-color 0.3s ease;
 }
 
-.team-card-lm:hover img,
-.team-card-lm-music:hover img {
+.erwin-card:hover img,
+.erwin-music-card:hover img {
   border-color: var(--blanco-azulado);
 }
 
-.team-card-lm {
+.erwin-card {
   cursor: grab;
 }
 
-.team-card-lm:active {
+.erwin-card:active {
   cursor: grabbing;
 }
 
-
-.team-card-lm h3 {
+.erwin-card h3 {
   color: var(--celeste);
   margin: 10px 0;
 }
 
-.team-card-lm p {
+.erwin-card p {
   color: var(--blanco-azulado);
   font-size: 0.95rem;
 }
-.team-card-placeholder {
+
+.erwin-card-placeholder {
   border: 2px dashed var(--celeste);
   background-color: transparent;
   color: var(--celeste);
@@ -238,18 +240,18 @@ h2 {
   cursor: grab;
 }
 
-.team-card-placeholder:hover {
+.erwin-card-placeholder:hover {
   background-color: rgba(119, 141, 169, 0.1);
 }
 
-.team-card-lm-music {
+.erwin-music-card {
   height: 240px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.team-card-lm-music a {
+.erwin-music-card a {
   display: block;
   font-weight: bold;
   color: var(--celeste);
@@ -257,28 +259,29 @@ h2 {
   transition: color 0.3s;
 }
 
-.team-card-lm-music a:hover {
-
+.erwin-music-card a:hover {
   color: var(--blanco-azulado);
   text-decoration: underline;
 }
+
 /* Contacto */
-#contacto {
+.erwin-contacto {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
 }
-#contacto p {
+
+.erwin-contacto p {
   text-align: center;
   margin: 8px 0;
 }
 
-#contacto a {
+.erwin-contacto a {
   color: var(--celeste);
   font-weight: bold;
   text-decoration: none;
 }
 
-#contacto a:hover {
+.erwin-contacto a:hover {
   color: var(--blanco-azulado);
   text-decoration: underline;
 }
@@ -292,4 +295,58 @@ h2 {
   background-color: var(--azul-medio);
   color: var(--celeste);
   font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .erwin-header h1 {
+    font-size: 2rem;
+  }
+  
+  .erwin-header .subtitle {
+    font-size: 1rem;
+  }
+  
+  .erwin-loading-bar-container {
+    width: 50%;
+  }
+  
+  .erwin-card,
+  .erwin-music-card {
+    width: 150px;
+  }
+  
+  .erwin-nav a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .erwin-header {
+    padding: 30px 20px;
+  }
+  
+  .erwin-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .erwin-cards-container {
+    gap: 15px;
+  }
+  
+  .erwin-card,
+  .erwin-music-card {
+    width: 130px;
+    padding: 10px;
+  }
+  
+  .erwin-nav {
+    padding: 10px;
+  }
+  
+  .erwin-nav a {
+    display: block;
+    margin: 5px 0;
+  }
 }
