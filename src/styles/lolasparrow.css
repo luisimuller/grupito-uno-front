@@ -1,6 +1,9 @@
-/* =========================================
-🎨 Paleta de colores
-========================================= */
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Sirivennela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
 :root {
   --rosa-fuerte: #c63ab4;
   --rosa-medio: #f14ca5;
@@ -12,9 +15,7 @@
   --texto: #333333;
 }
 
-/* =========================================
-🧩 Estilos generales
-========================================= */
+
 .lola-sparrow {
   font-family: "Poppins", Arial, sans-serif;
   margin: 0;
@@ -25,9 +26,7 @@
   min-height: 100vh;
 }
 
-/* =========================================
-🧭 Navegación
-========================================= */
+
 .lola-sparrow .site-nav {
   text-align: center;
   background-color: var(--crema);
@@ -50,9 +49,7 @@
   text-decoration: underline;
 }
 
-/* =========================================
-🌸 Encabezado
-========================================= */
+
 .lola-sparrow .site-header {
   text-align: center;
   padding: 60px 20px;
@@ -75,7 +72,7 @@
   font-weight: 300;
 }
 
-/* 🌟 Estrellas decorativas */
+
 .lola-sparrow .header-star {
   position: absolute;
   color: var(--blanco);
@@ -90,9 +87,7 @@
   100% { opacity: 0.2; transform: scale(0.7) rotate(-15deg); }
 }
 
-/* =========================================
-⏳ Barra de carga
-========================================= */
+
 .lola-sparrow .loading-bar-container {
   width: 25%;
   height: 15px;
@@ -113,9 +108,7 @@
   to { width: 100%; }
 }
 
-/* =========================================
-📦 Contenedor principal
-========================================= */
+
 .lola-sparrow .container {
   max-width: 900px;
   margin: 40px auto;
@@ -133,9 +126,7 @@
   font-family: "DM Serif Display", serif;
 }
 
-/* =========================================
-👤 Perfil
-========================================= */
+
 .lola-sparrow .profile {
   display: flex;
   flex-direction: column;
@@ -163,9 +154,7 @@
   color: var(--texto);
 }
 
-/* =========================================
-🃏 Tarjetas (habilidades, películas, música)
-========================================= */
+
 .lola-sparrow .team-cards-lm {
   display: flex;
   flex-wrap: wrap;
@@ -229,9 +218,7 @@
   text-decoration: underline;
 }
 
-/* =========================================
-💌 Contacto
-========================================= */
+
 .lola-sparrow .contact-section p {
   font-weight: bold;
   text-align: center;
@@ -248,9 +235,7 @@
   text-decoration: underline;
 }
 
-/* =========================================
-🦶 Footer
-========================================= */
+
 .lola-sparrow .site-footer {
   text-align: center;
   padding: 20px;
@@ -259,9 +244,7 @@
   font-size: 0.9rem;
 }
 
-/* =========================================
-📱 Responsivo
-========================================= */
+
 @media (max-width: 900px) {
   .lola-sparrow .container {
     padding: 0 15px;
@@ -308,9 +291,7 @@
     width: 80%;
   }
 }
-/* =========================================
-🎶 Tarjetas de música (Rosa Medio)
-========================================= */
+
 .lola-sparrow .team-cards-lm-music {
   display: flex;
   flex-wrap: wrap;
@@ -320,7 +301,7 @@
 }
 
 .lola-sparrow .team-card-lm-music {
-  background-color: #ff82a9; /* Rosa medio */
+  background-color: #ff82a9; 
   border-radius: 10px;
   width: 180px;
   text-align: center;
@@ -418,9 +399,7 @@
   text-decoration: underline;
 }
 
-/* =========================================
-📱 Responsivo para tarjetas de música
-========================================= */
+
 @media (max-width: 900px) {
   .lola-sparrow .team-cards-lm-music {
     gap: 15px;
