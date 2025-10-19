@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
 :root {
   --rojo: #bd1923;
   --negro: #181717;
@@ -68,6 +72,7 @@
   margin-top: 10px;
   font-size: 1.2rem;
   font-weight: 300;
+  color: var(--blanco);
 }
 
 .jack-smith .loading-bar-container {
@@ -99,6 +104,7 @@
 
 .jack-smith section {
   margin-bottom: 50px;
+  
 }
 
 .jack-smith h2 {
@@ -113,6 +119,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  
 }
 
 .jack-smith #presentacion p {
@@ -123,7 +130,7 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--texto);
+  color: var(--blanco);
 }
 
 .jack-smith .profile-img {
@@ -144,9 +151,14 @@
 
 .jack-smith .team-card-lm,
 .jack-smith .team-card-lm-music {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 20px;
   background-color: var(--rojo);
   border-radius: 10px;
-  width: 150px;
+  width: 200px;
   text-align: center;
   padding: 15px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.4);
@@ -168,16 +180,16 @@
 }
 
 .jack-smith .team-card-lm p {
-  font-size: 1em;
-  max-height: 45%;
-  color: var(--texto);
+    color: #fff0f5;
+    font-size: 0.95rem;
+    
 }
 
 .jack-smith .team-card-lm a,
 .jack-smith .team-card-lm-music a {
   display: block;
   font-weight: bold;
-  color: var(--gris-oscuro);
+  color: var(--blanco);
   text-decoration: none;
 }
 
