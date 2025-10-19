@@ -118,7 +118,7 @@
     ],
     "discos": [
       { "imagen": "/assets/img/nothing.jpeg", "titulo": "Nothing Else Matters", "link": "https://youtu.be/tAGnKpE4NCI?si=TmPCv31pQpa7STh6" },
-      { "imagen": "/assets/img/orions.jpg", "titulo": "Hasta que salga el sol", "link": "https://youtu.be/X-swNsEEzVM" },
+      { "imagen": "/assets/img/Orions.jpg", "titulo": "Hasta que salga el sol", "link": "https://youtu.be/X-swNsEEzVM" },
       { "imagen": "/assets/img/bohemianrhapsody.jpeg", "titulo": "Bohemian Rhapsody", "link": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ" }
     ],
     "contacto": {
