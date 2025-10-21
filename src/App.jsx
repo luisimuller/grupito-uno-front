@@ -7,6 +7,7 @@ import Integrante from "./components/Integrante";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./styles/index.css";
+import ApiOnlyPepes from "./components/ApiOnlyPepes";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/bitacora" element={<Bitacora />} />
             <Route path="/integrante/:id" element={<Integrante />} />
+            <Route path="/apionlypepes" element={<ApiOnlyPepes />} />
           </Routes>
         </div>
       </div>

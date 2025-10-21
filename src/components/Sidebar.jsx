@@ -13,7 +13,7 @@ function Sidebar() {
           {INTEGRANTES.map(member =>(
             <li><Link to={`/integrante/${member.id}`}>{member.nombre}</Link></li>
           ))}
-          {/*  <li><Link to="/integrante/5">Integrante 5</Link></li> */}
+          <li><Link to="/apionlypepes">API Only Pepes</Link></li>
         </ul>
       </nav>
     </aside>
