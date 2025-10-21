@@ -49,87 +49,48 @@ Además, el sitio se integra con una **API de Only Pepes** para agregar un toque
 
 ## Estructura de Archivos
 
-NextHire-Devs/
-│
-
-├── public/
-
-│
-
-└── src/
-
-├── assets/
-
-│ └── img/ # Imágenes del proyecto
-
-│
-├── components/ # Componentes principales del sitio
-
-│ ├── ApiOnlyPepes.jsx
-
-│ ├── Bitacora.jsx
-
-│ ├── Footer.jsx
-
-│ ├── Header.jsx
-
-│ ├── Home.jsx
-
-│ ├── Integrante.jsx
-
-│ ├── IntegranteContent.jsx
-
-│ ├── IntegranteFooter.jsx
-
-│ ├── IntegranteHeader.jsx
-
-│ ├── IntegranteNav.jsx
-
-│ ├── MemberCard.jsx
-
-│ ├── Sidebar.jsx
-
-│ └── Timeline.jsx
-
-│
-
-├── data/
-
-│ ├── integrantes.json # Datos de los integrantes (perfiles)
-
-│ └── integrantesData.js # Estructura JS para consumo alternativo
-
-│
-├── styles/ # Hojas de estilo individuales
-
-│ ├── apionlypepes.css
-
-│ ├── bitacora.css
-
-│ ├── carlosharddrive.css
-
-│ ├── erwinschrodinger.css
-
-│ ├── gregorykarta.css
-
-│ ├── jacksmith.css
-
-│ ├── lolasparrow.css
-
-│ ├── home.css
-
-│ ├── index.css
-
-│ └── timeline.css
-
-│
-
-├── App.jsx
-
-├── App.css
-
-├── main.jsx
-
-└── routes.jsx
+NextHire-Devs/\
+│\
+├── public/\
+│\
+└── src/\
+├── assets/\
+│ └── img/ # Imágenes del proyecto\
+│\
+├── components/ # Componentes principales del sitio\
+│ ├── ApiOnlyPepes.jsx\
+│ ├── Bitacora.jsx\
+│ ├── Footer.jsx\
+│ ├── Header.jsx\
+│ ├── Home.jsx\
+│ ├── Integrante.jsx\
+│ ├── IntegranteContent.jsx\
+│ ├── IntegranteFooter.jsx\
+│ ├── IntegranteHeader.jsx\
+│ ├── IntegranteNav.jsx\
+│ ├── MemberCard.jsx\
+│ ├── Sidebar.jsx\
+│ └── Timeline.jsx\
+│\
+├── data/\
+│ ├── integrantes.json # Datos de los integrantes (perfiles)\
+│ └── integrantesData.js # Estructura JS para consumo alternativo\
+│\
+├── styles/ # Hojas de estilo individuales\
+│ ├── apionlypepes.css\
+│ ├── bitacora.css\
+│ ├── carlosharddrive.css\
+│ ├── erwinschrodinger.css\
+│ ├── gregorykarta.css\
+│ ├── jacksmith.css\
+│ ├── lolasparrow.css\
+│ ├── home.css\
+│ ├── index.css\
+│ └── timeline.css\
+│\
+├── App.jsx\
+├── App.css\
+├── main.jsx\
+└── routes.jsx\
 
 
